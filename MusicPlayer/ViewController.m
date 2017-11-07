@@ -31,7 +31,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    // 后台播放音乐时，控制音乐操作
+    // 后台播放音乐时，控制音乐操作。也可以在 AppDelegate 的 didFinishLaunchingWithOptions，applicationWillResignActive 中处理
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     [self becomeFirstResponder];
 }
@@ -69,14 +69,16 @@
         }
         
         NSURL *url = [NSURL fileURLWithPath:pathString];
-        NSMutableArray *marr = [ViewController MusicInfoArrayWithFilePath: pathString];
-//        NSDictionary *dic = [self musicInfoFromUrl:url];
-        [self configNowPlayingCenter:nil];
+
         
         _player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
         [_player prepareToPlay];
         [_player setVolume:1];// The volume for the sound. The nominal range is from 0.0 to 1.0.
         _player.numberOfLoops = -1; //设置音乐播放次数  -1为一直循环
+        
+        //        NSMutableArray *marr = [ViewController MusicInfoArrayWithFilePath: pathString];
+        //        NSDictionary *dic = [self musicInfoFromUrl:url];
+        [self configNowPlayingCenter:@{@"title":@"千里明月光", @"artist":@"安琥"}];
     }
     
     return _player;
@@ -96,6 +98,7 @@
     
 }
 
+#pragma mark - 处理中断事件
 /* 处理中断事件，如：电话、拍照
  * 如果不处理，在收到电话等中断事件后，等这些事件结束后，音频不会自动重新播放
  */
@@ -120,6 +123,32 @@
     } 
     else {
         [self.player play]; //播放
+    }
+}
+
+#pragma mark - 锁屏下的音乐控制
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event
+{
+    switch (event.subtype)
+    {
+//            case UIEventSubtypeRemoteControlNextTrack: // 下一首
+//            case UIEventSubtypeRemoteControlPreviousTrack: // 上一首
+        case UIEventSubtypeRemoteControlPlay:// 播放
+            NSLog(@"%s-%d",__FUNCTION__,__LINE__);
+            //play
+            [self.player play];
+            break;
+        case UIEventSubtypeRemoteControlPause:// 暂停
+            //            NSLog(@"%s-%d",__FUNCTION__,__LINE__);
+            //pause
+            [self.player pause];
+            break;
+        case UIEventSubtypeRemoteControlStop:// 停止
+            NSLog(@"%s-%d",__FUNCTION__,__LINE__);
+            //stop
+            break;
+        default:
+            break;
     }
 }
 
@@ -165,22 +194,32 @@
     NSLog(@"锁屏设置: %@", dictionary);
     
     // BASE_INFO_FUN(@"配置NowPlayingCenter");
-    NSMutableDictionary * info = [NSMutableDictionary dictionary];
-    //音乐的标题
-    [info setObject:@"title" forKey:MPMediaItemPropertyTitle];
-    //音乐的艺术家
-    [info setObject:@"artist" forKey:MPMediaItemPropertyArtist];
-    //音乐的播放时间
-    [info setObject:[NSDate date] forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
-    //音乐的播放速度
-    [info setObject:@(1) forKey:MPNowPlayingInfoPropertyPlaybackRate];
+//    NSMutableDictionary * info = [NSMutableDictionary dictionary];
+//    //音乐的标题
+//    [info setObject:[dictionary objectForKey:@"title"] forKey:MPMediaItemPropertyTitle];
+//    //音乐的艺术家
+//    [info setObject:[dictionary objectForKey:@"artist"] forKey:MPMediaItemPropertyArtist];
+//    //音乐已经播放的时间
+//    [info setObject:@(_player.duration) forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];//
+//    NSLog(@"play back time: %lf", _player.duration);
+//    //音乐的播放速度. 1.0 表示时间的1秒对应播放时间的1秒
+//    [info setObject:@(1) forKey:MPNowPlayingInfoPropertyPlaybackRate];
     //音乐的总时间
 //    [info setObject:@(self.totalTime) forKey:MPMediaItemPropertyPlaybackDuration];
     //音乐的封面
 //    MPMediaItemArtwork * artwork = [[MPMediaItemArtwork alloc] initWithImage:[UIImage imageNamed:@"0.jpg"]];
 //    [info setObject:artwork forKey:MPMediaItemPropertyArtwork];
+    
+    NSDictionary *info = @{
+             MPMediaItemPropertyTitle : dictionary[@"title"],// 歌曲名
+             MPMediaItemPropertyArtist : dictionary[@"artist"],// 艺术家名
+             MPMediaItemPropertyAlbumTitle : dictionary[@"artist"],// 专辑名字
+             MPMediaItemPropertyPlaybackDuration : @(_player.duration),//歌曲总时长
+             MPNowPlayingInfoPropertyElapsedPlaybackTime : @(_player.currentTime)//歌曲的当前时间
+//             MPMediaItemPropertyArtwork : dictionary[@"artist"],//歌曲的插图, 类型是MPMeidaItemArtwork对象
+             };
     //完成设置
-    [[MPNowPlayingInfoCenter defaultCenter]setNowPlayingInfo:info];
+    [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:info];
 }
 
 + (NSMutableArray *)MusicInfoArrayWithFilePath:(NSString *)filePath
