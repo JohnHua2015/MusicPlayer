@@ -25,7 +25,7 @@
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     
-    //后台播放
+    // 注册后台播放
     AVAudioSession *session=[AVAudioSession sharedInstance];
     [session setActive:YES error:nil];
     [session setCategory:AVAudioSessionCategoryPlayback error:nil];

@@ -75,11 +75,14 @@
         [_player prepareToPlay];
         [_player setVolume:1];// The volume for the sound. The nominal range is from 0.0 to 1.0.
         _player.numberOfLoops = -1; //设置音乐播放次数  -1为一直循环
+        [_player setEnableRate:YES];
+        _player.currentTime = 5;
         
         //        NSMutableArray *marr = [ViewController MusicInfoArrayWithFilePath: pathString];
         //        NSDictionary *dic = [self musicInfoFromUrl:url];
-        [self configNowPlayingCenter:@{@"title":@"千里明月光", @"artist":@"安琥"}];
+        
     }
+    [self configNowPlayingCenter:@{@"title":@"千里明月光", @"artist":@"安琥"}];
     
     return _player;
 }
@@ -215,7 +218,8 @@
              MPMediaItemPropertyArtist : dictionary[@"artist"],// 艺术家名
              MPMediaItemPropertyAlbumTitle : dictionary[@"artist"],// 专辑名字
              MPMediaItemPropertyPlaybackDuration : @(_player.duration),//歌曲总时长
-             MPNowPlayingInfoPropertyElapsedPlaybackTime : @(_player.currentTime)//歌曲的当前时间
+             MPNowPlayingInfoPropertyElapsedPlaybackTime : @(_player.currentTime),//当前播放的item所消逝的时间(歌曲当前时间). 由系统根据之前提供elapsed time和playback rate自动计算的. 
+             MPNowPlayingInfoPropertyPlaybackRate: @(0)// 音乐的播放速度，0表示正常的播放速率.  
 //             MPMediaItemPropertyArtwork : dictionary[@"artist"],//歌曲的插图, 类型是MPMeidaItemArtwork对象
              };
     //完成设置
