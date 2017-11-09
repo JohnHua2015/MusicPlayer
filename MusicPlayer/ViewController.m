@@ -10,9 +10,10 @@
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface ViewController ()
+@interface ViewController ()<AVAudioPlayerDelegate>
 
 @property (strong, nonatomic) AVAudioPlayer *player;
+@property (strong, nonatomic) NSTimer *timer;
 
 @end
 
@@ -77,6 +78,7 @@
         _player.numberOfLoops = -1; //设置音乐播放次数  -1为一直循环
         [_player setEnableRate:YES];
         _player.currentTime = 5;
+        _player.delegate = self;
         
         //        NSMutableArray *marr = [ViewController MusicInfoArrayWithFilePath: pathString];
         //        NSDictionary *dic = [self musicInfoFromUrl:url];
@@ -138,17 +140,14 @@
 //            case UIEventSubtypeRemoteControlPreviousTrack: // 上一首
         case UIEventSubtypeRemoteControlPlay:// 播放
             NSLog(@"%s-%d",__FUNCTION__,__LINE__);
-            //play
             [self.player play];
             break;
         case UIEventSubtypeRemoteControlPause:// 暂停
-            //            NSLog(@"%s-%d",__FUNCTION__,__LINE__);
-            //pause
+            NSLog(@"%s-%d",__FUNCTION__,__LINE__);
             [self.player pause];
             break;
         case UIEventSubtypeRemoteControlStop:// 停止
             NSLog(@"%s-%d",__FUNCTION__,__LINE__);
-            //stop
             break;
         default:
             break;
@@ -219,12 +218,13 @@
              MPMediaItemPropertyAlbumTitle : dictionary[@"artist"],// 专辑名字
              MPMediaItemPropertyPlaybackDuration : @(_player.duration),//歌曲总时长
              MPNowPlayingInfoPropertyElapsedPlaybackTime : @(_player.currentTime),//当前播放的item所消逝的时间(歌曲当前时间). 由系统根据之前提供elapsed time和playback rate自动计算的. 
-             MPNowPlayingInfoPropertyPlaybackRate: @(0)// 音乐的播放速度，0表示正常的播放速率.  
+             MPNowPlayingInfoPropertyPlaybackRate: @(1)// 音乐的播放速度，0表示正常的播放速率.  
 //             MPMediaItemPropertyArtwork : dictionary[@"artist"],//歌曲的插图, 类型是MPMeidaItemArtwork对象
              };
     //完成设置
     [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:info];
 }
+
 
 + (NSMutableArray *)MusicInfoArrayWithFilePath:(NSString *)filePath
 {
