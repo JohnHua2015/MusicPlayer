@@ -220,7 +220,7 @@
 				TargetAttributes = {
 					743B94F01FAF4B3F008FD4F1 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 3EWN9XUTCH;
+						DevelopmentTeam = BSLHTJ88BT;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -449,11 +449,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3EWN9XUTCH;
+				DEVELOPMENT_TEAM = BSLHTJ88BT;
 				INFOPLIST_FILE = MusicPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jumore.MusicPlayer.cn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.god.MusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -462,11 +462,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3EWN9XUTCH;
+				DEVELOPMENT_TEAM = BSLHTJ88BT;
 				INFOPLIST_FILE = MusicPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jumore.MusicPlayer.cn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.god.MusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
