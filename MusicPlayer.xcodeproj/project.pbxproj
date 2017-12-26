@@ -449,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = BSLHTJ88BT;
 				INFOPLIST_FILE = MusicPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
