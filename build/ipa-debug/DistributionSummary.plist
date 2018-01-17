@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MusicPlayer.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>C91FA5EA99FC2E0521FAB448EF0D46B0CEBA4F3A</string>
+				<key>dateExpires</key>
+				<string>2018/4/28</string>
+				<key>type</key>
+				<string>iOS Development</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>BSLHTJ88BT.com.god.MusicPlayer</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>BSLHTJ88BT</string>
+				<key>get-task-allow</key>
+				<true/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>BSLHTJ88BT.com.god.MusicPlayer</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>MusicPlayer.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>97907d06-32f9-40aa-b895-d85d7ce31102</string>
+				<key>name</key>
+				<string>MusicPlayer_dev</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>BSLHTJ88BT</string>
+				<key>name</key>
+				<string></string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

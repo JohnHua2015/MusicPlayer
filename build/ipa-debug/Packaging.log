@@ -1,0 +1,138 @@
+2018-01-17 08:10:38 +0000 [MT] Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7ffe5673ad80; archive(resolved)='<IDEArchive: 0x7ffe563cba90>', distributionTask(resolved)='2', distributionMethod(resolved)='<IDEDistributionMethodDevelopmentSigned: 0x7ffe5666f070>', team(resolved)='<IDEProvisioningBasicTeam 0x7ffe5649bdc0: teamID: BSLHTJ88BT, teamName: (null)>'>
+	Chain (11, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7ffe5673ad80; archive = '<IDEArchive: 0x7ffe563cba90>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7ffe5666f070>', team='<IDEProvisioningBasicTeam 0x7ffe5649bdc0: teamID: BSLHTJ88BT, teamName: (null)>'>
+	<IDEDistributionProcessingPipelineContext: 0x7ffe56739220; archive = '<IDEArchive: 0x7ffe563cba90>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7ffe5666f070>', team='<IDEProvisioningBasicTeam 0x7ffe5649bdc0: teamID: BSLHTJ88BT, teamName: (null)>'>
+	<IDEDistributionContext: 0x7ffe56828540; archive = '<IDEArchive: 0x7ffe563cba90>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7ffe5666f070>', team='<IDEProvisioningBasicTeam 0x7ffe5649bdc0: teamID: BSLHTJ88BT, teamName: (null)>'>
+	<IDEDistributionContext: 0x7ffe566bf740; archive = '<IDEArchive: 0x7ffe563cba90>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7ffe5666f070>', team='<IDEProvisioningBasicTeam 0x7ffe5649bdc0: teamID: BSLHTJ88BT, teamName: (null)>'>
+	<IDEDistributionContext: 0x7ffe566b58b0; archive = '<IDEArchive: 0x7ffe563cba90>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7ffe5666f070>', team='<IDEProvisioningBasicTeam 0x7ffe5649bdc0: teamID: BSLHTJ88BT, teamName: (null)>'>
+	<IDEDistributionContext: 0x7ffe56833530; archive = '<IDEArchive: 0x7ffe563cba90>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7ffe5666f070>', team='<IDEProvisioningBasicTeam 0x7ffe5649bdc0: teamID: BSLHTJ88BT, teamName: (null)>'>
+	<IDEDistributionContext: 0x7ffe56497fd0; archive = '<IDEArchive: 0x7ffe563cba90>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7ffe5666f070>', team='<IDEProvisioningBasicTeam 0x7ffe5649bdc0: teamID: BSLHTJ88BT, teamName: (null)>'>
+	<IDEDistributionContext: 0x7ffe568332e0; archive = '<IDEArchive: 0x7ffe563cba90>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7ffe5666f070>', team='<IDEProvisioningBasicTeam 0x7ffe5649bdc0: teamID: BSLHTJ88BT, teamName: (null)>'>
+	<IDEDistributionContext: 0x7ffe56706220; archive = '<IDEArchive: 0x7ffe563cba90>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7ffe5666f070>', team='<IDEProvisioningBasicTeam 0x7ffe5649bdc0: teamID: BSLHTJ88BT, teamName: (null)>'>
+	<IDEDistributionContext: 0x7ffe563d4c50; archive = '<IDEArchive: 0x7ffe563cba90>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7ffe5666f070>', team='(null)'>
+	<IDEDistributionContext: 0x7ffe565d6920; archive = '<IDEArchive: 0x7ffe563cba90>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7ffe5673ad80>
+2018-01-17 08:10:38 +0000 [MT] Processing step: IDEDistributionCreateDestRootStep
+2018-01-17 08:10:38 +0000 [MT] Processing step: IDEDistributionCopyItemStep
+2018-01-17 08:10:38 +0000 [MT] Running /usr/bin/ditto '-V' '/Users/longhua/git/MusicPlayer/build/Debug-iphoneos/MusicPlayer.xcarchive/Products/Applications/MusicPlayer.app' '/var/folders/02/tsh9gwms46n90mp1j24y06nc0000gn/T/XcodeDistPipeline.3cr/Root/Payload/MusicPlayer.app'
+2018-01-17 08:10:38 +0000  >>> Copying /Users/longhua/git/MusicPlayer/build/Debug-iphoneos/MusicPlayer.xcarchive/Products/Applications/MusicPlayer.app 
+2018-01-17 08:10:38 +0000  copying file ./_CodeSignature/CodeResources ... 
+2018-01-17 08:10:38 +0000  5447 bytes for ./_CodeSignature/CodeResources
+2018-01-17 08:10:38 +0000  copying file ./安琥 - 千里明月光.mp3 ... 
+2018-01-17 08:10:38 +0000  5428734 bytes for ./安琥 - 千里明月光.mp3
+2018-01-17 08:10:38 +0000  copying file ./Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib ... 
+964 bytes for ./Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib
+copying file ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib ... 
+3494 bytes for ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
+copying file ./Base.lproj/Main.storyboardc/Info.plist ... 
+258 bytes for ./Base.lproj/Main.storyboardc/Info.plist
+copying file ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+1791 bytes for ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+copying file ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+832 bytes for ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+258 bytes for ./Base.lproj/LaunchScreen.storyboardc/Info.plist
+copying file ./archived-expanded-entitlements.xcent ... 
+376 bytes for ./archived-expanded-entitlements.xcent
+copying file ./MusicPlayer ... 
+199056 bytes for ./MusicPlayer
+copying file ./embedded.mobileprovision ... 
+11379 bytes for ./embedded.mobileprovision
+copying file ./Info.plist ... 
+1049 bytes for ./Info.plist
+copying file ./PkgInfo ... 
+2018-01-17 08:10:38 +0000  8 bytes for ./PkgInfo
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000 [MT] /usr/bin/ditto exited with 02018-01-17 08:10:38 +0000  
+
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000 [MT] Processing step: IDEDistributionEmbedProfileStep
+2018-01-17 08:10:38 +0000 [MT] Processing step: IDEDistributionAppThinningPlistStep
+2018-01-17 08:10:38 +0000 [MT] Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2018-01-17 08:10:38 +0000 [MT] Processing step: IDEDistributionCompileBitcodeStep
+2018-01-17 08:10:38 +0000 [MT] Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2018-01-17 08:10:38 +0000 [MT] Processing step: IDEDistributionCodeSlimmingStep
+2018-01-17 08:10:38 +0000 [MT] Processing step: IDEDistributionCopyBCSymbolMapsStep
+2018-01-17 08:10:38 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-01-17 08:10:38 +0000 [MT] Processing step: IDEDistributionSymbolsStep
+2018-01-17 08:10:38 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2018-01-17 08:10:38 +0000 [MT] Processing step: IDEDistributionAppThinningStep
+2018-01-17 08:10:38 +0000 [MT] Skipping step: IDEDistributionAppThinningStep because it said so
+2018-01-17 08:10:38 +0000 [MT] Processing step: IDEDistributionODRStep
+2018-01-17 08:10:38 +0000 [MT] Processing step: IDEDistributionStripXattrsStep
+2018-01-17 08:10:38 +0000 [MT] Running /usr/bin/xattr '-crs' '/var/folders/02/tsh9gwms46n90mp1j24y06nc0000gn/T/XcodeDistPipeline.3cr/Root/Payload/MusicPlayer.app'
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000  2018-01-17 08:10:38 +0000 [MT] /usr/bin/xattr exited with 0
+
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000 [MT] Processing step: IDEDistributionCodesignStep
+2018-01-17 08:10:38 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x7ffe564989c0 'com.god.MusicPlayer' '<DVTFilePath:0x7ffe563cc2a0:'/Users/longhua/git/MusicPlayer/build/Debug-iphoneos/MusicPlayer.xcarchive/Products/Applications/MusicPlayer.app'>'> from <IDEiCloudEntitlementsProcessor: 0x7ffe56491660>: {
+}
+2018-01-17 08:10:38 +0000 [MT] Entitlements for <IDEDistributionItem: 0x7ffe564989c0 'com.god.MusicPlayer' '<DVTFilePath:0x7ffe563cc2a0:'/Users/longhua/git/MusicPlayer/build/Debug-iphoneos/MusicPlayer.xcarchive/Products/Applications/MusicPlayer.app'>'>: {
+    "application-identifier" = "BSLHTJ88BT.com.god.MusicPlayer";
+    "com.apple.developer.team-identifier" = BSLHTJ88BT;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "BSLHTJ88BT.com.god.MusicPlayer"
+    );
+}
+2018-01-17 08:10:38 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x7ffe564989c0 'com.god.MusicPlayer' '<DVTFilePath:0x7ffe563cc2a0:'/Users/longhua/git/MusicPlayer/build/Debug-iphoneos/MusicPlayer.xcarchive/Products/Applications/MusicPlayer.app'>'> to: /var/folders/02/tsh9gwms46n90mp1j24y06nc0000gn/T/XcodeDistPipeline.3cr/entitlements5Do1FK
+2018-01-17 08:10:38 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' 'C91FA5EA99FC2E0521FAB448EF0D46B0CEBA4F3A' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/02/tsh9gwms46n90mp1j24y06nc0000gn/T/XcodeDistPipeline.3cr/entitlements5Do1FK' '/var/folders/02/tsh9gwms46n90mp1j24y06nc0000gn/T/XcodeDistPipeline.3cr/Root/Payload/MusicPlayer.app'
+2018-01-17 08:10:38 +0000  /var/folders/02/tsh9gwms46n90mp1j24y06nc0000gn/T/XcodeDistPipeline.3cr/Root/Payload/MusicPlayer.app: replacing existing signature
+2018-01-17 08:10:38 +0000  /var/folders/02/tsh9gwms46n90mp1j24y06nc0000gn/T/XcodeDistPipeline.3cr/Root/Payload/MusicPlayer.app: signed app bundle with Mach-O universal (armv7 arm64) [com.god.MusicPlayer]
+2018-01-17 08:10:38 +0000  2018-01-17 08:10:38 +0000  
+
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000  2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000 [MT] /usr/bin/codesign exited with 0
+
+2018-01-17 08:10:38 +0000  
+2018-01-17 08:10:38 +0000 [MT] Processing step: IDEDistributionStreamingZipItemStep
+2018-01-17 08:10:38 +0000 [MT] Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-01-17 08:10:38 +0000 [MT] Processing step: IDEDistributionCreateIPAStep
+2018-01-17 08:10:38 +0000 [MT] Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/02/tsh9gwms46n90mp1j24y06nc0000gn/T/XcodeDistPipeline.3cr/Root' '/var/folders/02/tsh9gwms46n90mp1j24y06nc0000gn/T/XcodeDistPipeline.3cr/Packages/MusicPlayer.ipa'
+2018-01-17 08:10:38 +0000  >>> Copying /var/folders/02/tsh9gwms46n90mp1j24y06nc0000gn/T/XcodeDistPipeline.3cr/Root 
+2018-01-17 08:10:38 +0000  copying file ./Payload/MusicPlayer.app/_CodeSignature/CodeResources ... 
+2018-01-17 08:10:38 +0000  5447 bytes for ./Payload/MusicPlayer.app/_CodeSignature/CodeResources
+2018-01-17 08:10:38 +0000  copying file ./Payload/MusicPlayer.app/安琥 - 千里明月光.mp3 ... 
+2018-01-17 08:10:39 +0000  5428734 bytes for ./Payload/MusicPlayer.app/安琥 - 千里明月光.mp3
+2018-01-17 08:10:39 +0000  copying file ./Payload/MusicPlayer.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib ... 
+964 bytes for ./Payload/MusicPlayer.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib
+copying file ./Payload/MusicPlayer.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib ... 
+2018-01-17 08:10:39 +0000  3494 bytes for ./Payload/MusicPlayer.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
+copying file ./Payload/MusicPlayer.app/Base.lproj/Main.storyboardc/Info.plist ... 
+2018-01-17 08:10:39 +0000  258 bytes for ./Payload/MusicPlayer.app/Base.lproj/Main.storyboardc/Info.plist
+2018-01-17 08:10:39 +0000  copying file ./Payload/MusicPlayer.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2018-01-17 08:10:39 +0000  1791 bytes for ./Payload/MusicPlayer.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+copying file ./Payload/MusicPlayer.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2018-01-17 08:10:39 +0000  832 bytes for ./Payload/MusicPlayer.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+2018-01-17 08:10:39 +0000  copying file ./Payload/MusicPlayer.app/Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2018-01-17 08:10:39 +0000  258 bytes for ./Payload/MusicPlayer.app/Base.lproj/LaunchScreen.storyboardc/Info.plist
+copying file ./Payload/MusicPlayer.app/archived-expanded-entitlements.xcent ... 
+2018-01-17 08:10:39 +0000  376 bytes for ./Payload/MusicPlayer.app/archived-expanded-entitlements.xcent
+copying file ./Payload/MusicPlayer.app/MusicPlayer ... 
+2018-01-17 08:10:39 +0000  199056 bytes for ./Payload/MusicPlayer.app/MusicPlayer
+copying file ./Payload/MusicPlayer.app/embedded.mobileprovision ... 
+2018-01-17 08:10:39 +0000  11379 bytes for ./Payload/MusicPlayer.app/embedded.mobileprovision
+copying file ./Payload/MusicPlayer.app/Info.plist ... 
+2018-01-17 08:10:39 +0000  1049 bytes for ./Payload/MusicPlayer.app/Info.plist
+copying file ./Payload/MusicPlayer.app/PkgInfo ... 
+2018-01-17 08:10:39 +0000  8 bytes for ./Payload/MusicPlayer.app/PkgInfo
+2018-01-17 08:10:39 +0000  2018-01-17 08:10:39 +0000  
+
+2018-01-17 08:10:39 +0000 [MT] /usr/bin/ditto exited with 0
+2018-01-17 08:10:39 +0000  2018-01-17 08:10:39 +0000  
+
+2018-01-17 08:10:39 +0000 [MT] Processing step: IDEDistributionCreateManifestStep
